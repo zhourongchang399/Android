@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.helloworld">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".presenter.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/w_3"
+        android:label=""
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.ChangeGroupNameActivity"></activity>
+        <activity android:name=".activity.AddGroupMenberActivity" />
+        <activity android:name=".activity.HistoryMsgGroupActivity"/>
+        <activity android:name=".activity.GroupChatSettingActivity" />
+        <activity android:name=".activity.BlackListActivity" />
+        <activity android:name=".activity.PhotoActivity" />
+        <activity android:name=".activity.faceActivity" />
+        <activity android:name=".activity.ImageActivity" />
+        <activity
+            android:name=".activity.ChatMessageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.PermissionActivity" />
+        <activity android:name=".activity.ChatMessageGroupActivity" />
+        <activity android:name=".activity.AddFriendActivity" />
+        <activity android:name=".view.selfInfoDialog" />
+        <activity android:name=".activity.OtherLoginActivity" />
+        <activity android:name=".activity.SearchByMenberActivity"/>
+        <activity android:name=".activity.PhoneLoginActivity" />
+        <activity android:name=".activity.SearchOneActivity" />
+        <activity android:name=".activity.FriendCardActivity" />
+        <activity android:name=".activity.HistoryMsgActivity" />
+        <activity
+            android:name=".activity.ApplicationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.registerActivity" />
+        <activity android:name=".activity.splash" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".socket.chatSocket" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.helloworld.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>
